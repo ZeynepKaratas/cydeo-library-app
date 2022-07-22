@@ -1,6 +1,6 @@
 Feature: Login with parameters
 
-  @librarianParam
+  @librarianParam @smoke
   Scenario: Login as librarian 49
     Given I am on the login page
     When I enter username "librarian49@library"

@@ -34,7 +34,7 @@ public class UserTables_stepDef {
     @Then("table should have following column names:")
     public void table_should_have_following_column_names(List<String> expectedDataTableHeader) {
 
-//        BrowserUtils.waitForVisibility(userPage.booksLink, 20);
+        BrowserUtils.waitForVisibility(userPage.dashboardLink, 10);
         List<String> actualTableHeader = BrowserUtils.getElementsText(userPage.userTableHeader);
         Assert.assertEquals(expectedDataTableHeader,actualTableHeader);
     }

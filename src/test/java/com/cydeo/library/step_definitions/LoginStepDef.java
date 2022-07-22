@@ -93,7 +93,7 @@ public class LoginStepDef {
     @Then("account holder name should be {string}")
     public void account_holder_name_should_be(String expectedUserName) {
 
-        BrowserUtils.waitForVisibility(landingPage.dashboardLink,10);
+        BrowserUtils.waitForVisibility(landingPage.booksLink,10);
         String actualUserName = landingPage.userNameLink.getText();
         Assert.assertEquals(expectedUserName,actualUserName);
 
