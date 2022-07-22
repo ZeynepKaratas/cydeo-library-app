@@ -35,7 +35,7 @@ public class LoginStepDef {
     public void dashboard_should_be_displayed() {
 
         wait.until(ExpectedConditions.urlContains("dashboard"));
-        Assert.assertTrue("dashbord is not faund" , Driver.getDriver().getCurrentUrl().contains("dashboard"));
+        Assert.assertTrue("dashbord is not found" , Driver.getDriver().getCurrentUrl().contains("dashboard"));
 
     }
 
@@ -48,7 +48,7 @@ public class LoginStepDef {
     @Then("books should be displayed")
     public void books_should_be_displayed() {
         wait.until(ExpectedConditions.urlContains("books"));
-        Assert.assertTrue("books is not faund" , Driver.getDriver().getCurrentUrl().contains("books"));
+        Assert.assertTrue("books is not found" , Driver.getDriver().getCurrentUrl().contains("books"));
 
     }
 
@@ -64,13 +64,6 @@ public class LoginStepDef {
     @When("click the sign in button")
     public void click_the_sign_in_button() {
         loginPage.signinBtn.click();
-    }
-    @When("there should be {string} users")
-    public void there_should_be_users(String expectedUserCount) {
-        BrowserUtils.waitForVisibility(landingPage.userCount, 10 );
-        String actualUserCount = landingPage.userCount.getText();
-        Assert.assertEquals("User count is failing",expectedUserCount,actualUserCount);
-
     }
 
     @And("there should be {int} users")
