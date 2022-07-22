@@ -15,7 +15,7 @@ public class UserTables_stepDef {
 
 
     @Given("I click on {string} link")
-    public void ı_click_on_link(String link) {
+    public void click_on_link(String link) {
 
         BrowserUtils.waitForVisibility(userPage.dashboardLink,10);
 
